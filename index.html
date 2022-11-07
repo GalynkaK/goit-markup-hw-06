@@ -299,42 +299,60 @@
 
       
       <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button data-modal-close class="modal-close">
-          <svg class="modal-icon" width="11" height="11">
-            <use href="./imeges/icons.svg#icon-close"></use>_
-          </svg>
-        </button>
+        <div class="modal">
+          <button data-modal-close class="modal-close">
+            <svg class="modal-icon" width="11" height="11">
+              <use href="./imeges/icons.svg#icon-close"></use>_
+            </svg>
+          </button>
 
-          <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+            <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
 
-        <form class="data-form" autocomplete="off">
-          <div class="form-field">
-            <label for="name" class="form-label">Ім'я</label>
-            <input  class="form-input" type="text" name="user name" id="name">
-          </div>
-          <div class="form-field">
-            <label for="tel" class="form-label">Телефон</label>
-            <input  class="form-input" type="tel" name="tel" id="tel"> 
-          </div>
-          <div class="form-field">
-            <label for="mail" class="form-label">Пошта</label>
-            <input  class="form-input" type="email" name="email" id="mail">
-          </div>
-          <div class="form-field">
-            <label for="comments" class="form-label">Коментар</label>
-            <textarea class="note" name="comments" id="comments" rows="10" placeholder="Введіть текст"></textarea>
+          <form class="data-form" autocomplete="off">
             <div class="form-field">
-              <input class="form-input" type="checkbox" name="pact" id="pact">
-              <label for="pact" class="form-label">Погоджуюся з розсилкою та приймаю Умови договору</label>
+              <label for="name" class="form-label">Ім'я</label>
+              <input type="text" class="form-input"  name="user name" id="name">
+              <svg class="form-svg" width="18" height="18">
+                <use href="./imeges/icons.svg#icon-person"></use>_
+              </svg>
             </div>
-          
-          <button type="submit" class="button btn-submit">Відправити</button>
-          </div>
-        </form>
+            <div class="form-field">
+              <label for="tel" class="form-label">Телефон</label>
+              <input  type="tel" class="form-input" name="tel" id="tel"> 
+              <svg class="form-svg" width="18" height="18">
+                <use href="./imeges/icons.svg#icon-phone"></use>_
+              </svg>
+            </div>
+            <div class="form-field">
+              <label for="mail" class="form-label">Пошта</label>
+              <input type="email" class="form-input" name="email" id="mail">
+              <svg class="form-svg" width="18" height="18">
+                <use href="./imeges/icons.svg#icon-email"></use>_
+              </svg>
+            </div>
 
+            <div class="form-field">
+              <label for="comments" class="form-label">Коментар</label>
+              <textarea rows="10"  id="comments" name="comments"  placeholder="Введіть текст"></textarea>
+            </div>
+              <div class="form-reconciliation">
+                <input type="checkbox" class="visually-hidden" name="checkbox" id="acppact">
+                <svg class="no-check">
+                  <use href="./imeges/icons.svg#icon-no-check"></use>_
+                </svg>
+                <svg class="check">
+                  <use href="./imeges/icons.svg#icon-check"></use>_
+                </svg>
+                <label for="reconciliation-check"> Погоджуюся з розсилкою та приймаю 
+                  <a class ="reconciliation-link" href> Умови договору </a>
+                </label>
+              </div>
+              
+            <button type="submit" class="button btn-submit">Відправити</button>
+          
+          </form>
+        </div>
       </div>
-    </div>
   </main>
 
   <footer class="footer">
