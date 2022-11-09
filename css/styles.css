@@ -535,16 +535,13 @@ h1,h2,h3,p{
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--duration), opacity 250ms var(--duration);
   min-width: 528px;
-  min-height: 581px;
-  padding-top: 34px;
-  padding-bottom: 46px;
+  padding: 40px;
   background: var(--accent-color);
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
   border-radius: 4px;
 }
 
 .modal-title{
-  margin-top: 40px;
   text-align: center;
   margin-bottom: 12px;
   font-size: 20px;
@@ -583,19 +580,18 @@ h1,h2,h3,p{
 
 textarea{
   resize: none;
+  width: 100%;
   padding: 12px 16px;
   height: 120px;
   margin-bottom: 20px;
   font-size: 12px;
   line-height:1.16;
   letter-spacing: 0.01em;
+  transition: outline 250ms var(--duration)
 }
 
 .form-field{
   position: relative;
-  flex-direction: column;
-  width: 448px;
-  margin: 0 40px 20px;
 }
 
 .form-label{
@@ -609,10 +605,13 @@ textarea{
 }
 
 .form-field input:focus,
-.form-field textarea:focus {
+.form-field textarea:focus{
+  outline: var(--nav-color);
   border-color: var(--nav-color);
   box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
 }
+
+
 
 .form-field input,
 .form-input textarea{
@@ -626,6 +625,7 @@ textarea{
   outline: none;
   transition: border 250ms var(--duration), box-shadow 250ms var(--duration);
 }
+
 
 .form-field input::placeholder{
   font-weight: 400;
@@ -657,7 +657,60 @@ textarea{
   fill: var(--nav-color);
 }
 
-.btn-submit{
+.form-reconciliation{
+  display: flex;
+  align-items: center;
+  margin: 0 auto 30px;
+}
+
+.check-box{
+  position: absolute;
+  border: var(--title-text-color);
+  border-radius: 0.5px;
+  overflow: hidden;
+  border-color: var(--title-text-color);
+  opacity: 1;
+  transition: opacity 250ms var(--duration);
+}
+
+.check{
+  background-color: var(--nav-color);
+  opacity: 0;
+  transition: opacity 250ms var(--duration);
+}
+
+.form-reconciliation input:checked~.no-check {
+  opacity: 0;
+}
+
+/* .check:focus,
+.check:hover{
+  opacity: 1;
+} */
+
+.check-box, .check{
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+}
+
+.reconciliation-label{
+  margin-left: 24px;
+  line-height: 1.71;
+  color: var(--title-text-color);
+  font-size: 14px;
+}
+
+.reconciliation-check{
+  font-size: 14px;
+}
+
+.reconciliation-link{
+color: var(--nav-color);
+}
+
+.btn-submit {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -673,42 +726,6 @@ textarea{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px
 }
-
-.form-reconciliation{
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 425px;
-  margin: 0 auto 30px;
-}
-
-.no-check{
-  opacity: 1;
-  transition: opacity 250ms var(--duration);
-}
-
-.check, .no-check{
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 16px;
-  height: 15px;
-  transform: translateY(-50%);
-}
-
-.reconciliation-check label{
-  margin-left: 24px;
-  line-height: calc(24 / 14);
-  color: var(--main-color);
-}
-
-.reconciliation-link{
-color: var(--nav-color);
-}
-
 
 /*  ПОРТФОЛІО */
 
@@ -754,7 +771,6 @@ color: var(--nav-color);
   flex-wrap: wrap;
   justify-content: center;
 }
-
 
 .flex-emelent{
   position: relative;
