@@ -336,19 +336,17 @@
               <textarea rows="10" class="textarea" id="comments" name="comments"  placeholder="Введіть текст"></textarea>
             </div>
 
-              <div class="form-reconciliation">
-                <input class="visially-hidden" type="checkbox" name="checked" id="checked-checkbox" />
-                <svg class="no-check">
-                  <use href="./images/icons.svg#icon-no-check"></use>
+            <label class="option-label">
+              <input type="checkbox" name="policy" value="accept-policy" class="checkbox">
+              <span class="custom-checkbox">
+                <svg class="checkbox-icon" width="11" height="8">
+                  <use href="./imeges/icons.svg#icon-icon-check"></use>
                 </svg>
-                <svg class="check">
-                  <use href="./images/icons.svg#icon-icon-check"></use>
-                </svg>
-                <label for="checked-checkbox">
-                  Погоджуюся з розсилкою та приймаю <a class="reconciliation-link" href="">Умови договору</a>
-                </label>
-              </div>
-              
+              </span>
+              <span class="option-span">Погоджуюся з розсилкою та приймаю <a class="form-link" href="">Умови
+                  договору</a></span>
+            </label>
+
             <button type="submit" class="button btn-submit">Відправити</button>
           
           </form>
@@ -357,7 +355,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer">
+    <div class="container footer-container">
       <div class="logo-adress">
         <div class="footer-emblem">
             <a href="./index.html" lang="en" class="logo-link-footer">Web<span class="logo-footer">Studio</span></a>
@@ -404,17 +402,15 @@
             </li>
           </ul>
       </div>
-      <form class="form-mail" autocomplete="off">
+      
       <div class="action">
         <p class="title-footer">Підпишіться на розсилку</p>
-        <div class="joing">
+        <form class="form-mail" autocomplete="off">
           <input class="joing-mail" type="mail" name="mail" placeholder="E-mail">
           <button class="button btn-footer">Підписатися <svg class="follow-icon" width="24" height="24"><use href="./imeges/icons.svg#icon-icon-send">_</use></svg>
           </button>
-
-        </div>
+        </form>
       </div>
-      </form>
     </div>
   </footer>
   <script src="./js/modal.js"></script>

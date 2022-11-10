@@ -239,6 +239,7 @@ h1,h2,h3,p{
 
 .features-list{
   width: 270px;
+  
 }
 
 /* .features-list::before{
@@ -273,6 +274,7 @@ h1,h2,h3,p{
 .features-list-svg {
   display: flex;
   height: 120px;
+  margin-bottom: 30px;
 }
 
 .link-svg{
@@ -584,6 +586,7 @@ textarea{
   padding: 12px 16px;
   height: 120px;
   margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
   font-size: 12px;
   line-height:1.16;
   letter-spacing: 0.01em;
@@ -595,11 +598,11 @@ textarea::placeholder {
 
 .form-field{
   position: relative;
+  margin-bottom: 4px;
 }
 
 .form-label{
   display: block;
-  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -647,7 +650,7 @@ textarea::placeholder {
 .form-svg{
   display: inline-block;
   position: absolute;
-  top: 28px;
+  top: 25px;
   left: 12px;
   width: 18px;
   height: 18px;
@@ -658,53 +661,47 @@ textarea::placeholder {
   fill: var(--nav-color);
 }
 
-.form-reconciliation{
-  display: flex;
-  align-items: center;
-  margin: 0 auto 30px;
-}
 
-.check-box{
+.checkbox {
   position: absolute;
-  border: var(--title-text-color);
-  border-radius: 0.5px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  flex-shrink: 0;
+  clip: rect(0 0 0 0);
   overflow: hidden;
-  border-color: var(--title-text-color);
-  opacity: 1;
-  transition: opacity 250ms var(--duration);
+  border-radius: 2px;
 }
 
-.check{
-  background-color: var(--nav-color);
-  opacity: 0;
-  transition: opacity 250ms var(--duration);
-}
 
-.form-reconciliation input:checked~.no-check {
-  opacity: 0;
-} 
-
-
-.no-check, .check{
-  display: inline-block;
-  position: absolute;
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid var(--title-text-color);
 }
 
-.form-reconciliation label{
-  margin-left: 24px;
-  line-height: 1.71;
-  color: var(--title-text-color);
-  font-size: 14px;
+.checkbox-icon {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
 }
 
-.reconciliation-check{
-  font-size: 14px;
+.checkbox:checked+.custom-checkbox {
+  background-color: var(--nav-color);
+  border: 1px solid var(--nav-color);
 }
 
-.reconciliation-link{
-color: var(--nav-color);
+.checkbox:checked+.custom-checkbox .checkbox-icon {
+  opacity: 1;
+  fill: var(--accent-color);
 }
 
 .btn-submit {
@@ -712,6 +709,7 @@ color: var(--nav-color);
   justify-content: center;
   align-items: center;
   margin: auto;
+  margin-top: 30px;
   width: 200px;
   height: 50px;
   text-align: center;
@@ -722,6 +720,10 @@ color: var(--nav-color);
   border-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px
+}
+.btn-submit:hover,
+.btn-submit:focus{
+  background-color: #188CE8;
 }
 
 /*  ПОРТФОЛІО */
@@ -899,7 +901,7 @@ address{
   font-style: normal;
 
 }
-.footer{
+.footer-container{
   display: flex;
 }
 
@@ -942,6 +944,7 @@ address{
   display: block;
   align-items: center;
   margin-right: 93px;
+  padding-top: 12px;
 }
 
 .title-footer{
@@ -998,6 +1001,7 @@ address{
   align-items: center;
   width: 570px;
   height: 86px;
+  padding-top: 12px;
 }
 
 .title-footer{
@@ -1010,13 +1014,13 @@ address{
   color: var(--accent-color);
 }
 
-.joing{
+.form-mail{
   display: flex;
-  align-items: center;
-  margin-top: 0;
 }
 
 .joing-mail{
+    /* align-items: center;
+    margin-top: 0; */
   width: 358px;
   height: 50px;
   margin-right: 12px;
@@ -1032,6 +1036,7 @@ address{
 }
 
 .btn-footer{
+  display: flex;
   width: 200px;
   height: 50px;
   display: flex;
